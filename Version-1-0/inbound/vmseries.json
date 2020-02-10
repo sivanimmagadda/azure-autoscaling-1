@@ -300,6 +300,12 @@
                                         "subnet": {
                                             "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'), '/subnets/', parameters('subnetNameUntrust'))]"
                                         },
+                                        "publicIPAddressConfiguration": {
+                                            "name": "pavm_pip",
+                                            "properties": {
+                                                "idleTimeoutInMinutes": 15
+                                            }
+                                        },
                                         "loadBalancerBackendAddressPools": [
                                         {
                                             "id": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Network/loadBalancers/', parameters('fwLbName'), '/backendAddressPools/', parameters('fwLbBePoolName'))]"
