@@ -245,7 +245,7 @@
                     "storageProfile": {
                         "osDisk": {
                             "managedDisk": {
-                                "storageAccountType": "Standard_LRS"
+                                "storageAccountType": "Premium_LRS"
                             },
                             "caching": "ReadWrite",
                             "createOption": "FromImage",
